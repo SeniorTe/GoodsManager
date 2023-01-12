@@ -17,10 +17,11 @@ public class Book extends Product {
     }
 
     public boolean matches(String search) {
-        if(!super.matches(search)) {
-            if (getAuthor() .contains(search)) {
-                return true;
-            }
+        if (super.matches(search)) {
+            return true;
+        }
+        if (getAuthor().contains(search)) {
+            return true;
         }
         return false;
     }
