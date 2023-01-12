@@ -20,7 +20,7 @@ public class Smartphone extends Product {
         if (super.matches(search)) {
             return true;
         }
-        if (getManufacturer() .contains(search)) {
+        if (getManufacturer().contains(search)) {
             return true;
         }
         return false;
