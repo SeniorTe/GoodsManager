@@ -11,13 +11,13 @@ public class ProductManager {
         repo.addProduct(product);
     }
 
-    public boolean matches(Product product, String search) {
-        if (product.getName().contains(search)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+//    public boolean matches(Product product, String search) {
+//        if (product.getName().contains(search)) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 
     public Product[] searchBy(String text) {
 
