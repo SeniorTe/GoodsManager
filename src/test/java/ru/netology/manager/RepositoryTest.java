@@ -117,4 +117,36 @@ public class RepositoryTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+
+    public void shouldSearchByAuthor() {
+
+        manager.addProduct(product1);
+        manager.addProduct(product2);
+        manager.addProduct(product3);
+        manager.addProduct(product4);
+        manager.addProduct(product5);
+
+        Product[] expected = {product2};
+        Product[] actual = manager.searchBy("Автор2");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+
+    public void shouldSearchByManufacturer() {
+
+        manager.addProduct(product1);
+        manager.addProduct(product2);
+        manager.addProduct(product3);
+        manager.addProduct(product4);
+        manager.addProduct(product5);
+
+        Product[] expected = {product3};
+        Product[] actual = manager.searchBy("Производитель1");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
